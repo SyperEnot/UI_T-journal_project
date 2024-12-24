@@ -11,13 +11,13 @@ import static data.TestData.*;
 public class CreateTextPage {
 
     private SelenideElement community = $("._pill_opwej_4", 1);
-    private SelenideElement createTextButton = $("._fakeForm_1trhq_4");
+    private SelenideElement createTextButton = $("[data-analytics='form-link']", 2);
     private SelenideElement createText = $("._description_to9o0_3");
-    private SelenideElement telegram = $("._link_1wiak_3");
+    private SelenideElement rules = $("._link_1wiak_3");
     private SelenideElement sendTextButton =$("._button_4ofwg_6", 2);
     private SelenideElement checkField =$("._input_1wff9_45");
 
-    private final String linkTelegram = "https://journal.tinkoff.ru/community-rules";
+    private final String linkRules = "https://journal.tinkoff.ru/community-rules";
 
     @Step("Открыть страницу")
     public CreateTextPage openPage() {
@@ -45,7 +45,7 @@ public class CreateTextPage {
 
     @Step("Проверяем наличие ссылки на Правила")
     public CreateTextPage checkLinkRules() {
-        telegram.shouldHave(href(linkTelegram));
+        rules.shouldHave(href(linkRules));
         return this;
     }
 
