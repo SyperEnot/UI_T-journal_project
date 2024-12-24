@@ -13,7 +13,7 @@ public class MainPage {
     private ElementsCollection flows = $("._flows_t97zd_4").$$("a");
     private final SelenideElement flowButton = $("._link_5o2zi_3");
     private final SelenideElement content = $("._heading_juhjt_1");
-    private final SelenideElement telegram = $("._link_1c4n7_12");
+    private final SelenideElement telegram = $("[data-social='telegram']");
 
     private final String Title = "Потоки";
     private final String linkTelegram = "//t.me/addlist/YlFKTKFrX9wwYjQy";
