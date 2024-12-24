@@ -14,7 +14,7 @@ public class CreateTextPage {
     private SelenideElement createTextButton = $("._fakeForm_1trhq_4");
     private SelenideElement createText = $("._description_to9o0_3");
     private SelenideElement telegram = $("._link_1wiak_3");
-    private SelenideElement sendTextButton =$("[type='submit']", 1);
+    private SelenideElement sendTextButton =$("._button_4ofwg_6", 2);
     private SelenideElement checkField =$("._input_1wff9_45");
 
     private final String linkTelegram = "https://journal.tinkoff.ru/community-rules";
