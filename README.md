@@ -13,17 +13,17 @@
   ## :computer: Использованный стек технологий
 
 <p align="center">
-<a href="https://www.java.com/"><img src="/media/logo/java.svg" width="70" height="70"  alt="Java"/></a>
-<a href="https://www.jetbrains.com/idea/"><img src="media/logo/IJ.svg" width="70" height="70"  alt="IDEA"/></a>
-<a href="https://www.selenide.org/"><img src="media/logo/selenide.svg" width="70" height="70" alt="Selenide" title="Selenide"/></a> 
-<a href="https://aerokube.com/selenoid/"><img src="media/logo/selenoid.svg" width="70" height="70"  alt="Selenoid"/></a>
-<a href="https://github.com/allure-framework"><img src="media/logo/allure.svg" width="70" height="70"  alt="Allure"/></a>
-<a href="https://gradle.org/"><img src="media/logo/gradle.svg" width="70" height="70"  alt="Gradle"/></a>
-<a href="https://junit.org/junit5/"><img src="media/logo/jUnit5.svg" width="70" height="70"  alt="JUnit 5"/></a>
-<a href="https://www.jenkins.io/"><img src="media/logo/jenkins.svg" width="70" height="70"  alt="Jenkins"/></a>
-<a href="https://www.atlassian.com/software/jira/"><img src="media/logo/Jira.svg" width="70" height="70" alt="Jira" title="Jira"/></a> 
-<a href="https://github.com/"><img src="media/logo/gitHub.svg" width="70" height="70"  alt="GitHub"/></a>
-<a href="https://web.telegram.org/"><img src="media/logo/telegram.svg" width="70" height="70"  alt="Telegram"/></a>
+<a href="https://www.java.com/"><img src="image/logo/Java.svg" width="70" height="70"  alt="Java"/></a>
+<a href="https://www.jetbrains.com/idea/"><img src="image/logo/Intelij_IDEA.svg" width="70" height="70"  alt="IDEA"/></a>
+<a href="https://www.selenide.org/"><img src="image/logo/Selenide.svg" width="70" height="70" alt="Selenide" title="Selenide"/></a> 
+<a href="https://aerokube.com/selenoid/"><img src="image/logo/Selenoid.svg" width="70" height="70"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework"><img src="image/logo/Allure.svg" width="70" height="70"  alt="Allure"/></a>
+<a href="https://gradle.org/"><img src="image/logo/Gradle.svg" width="70" height="70"  alt="Gradle"/></a>
+<a href="https://junit.org/junit5/"><img src="image/logo/JUnit5.svg" width="70" height="70"  alt="JUnit 5"/></a>
+<a href="https://www.jenkins.io/"><img src="image/logo/Jenkins.svg" width="70" height="70"  alt="Jenkins"/></a>
+<a href="https://www.atlassian.com/software/jira/"><img src="image/logo/Jira.svg" width="70" height="70" alt="Jira" title="Jira"/></a> 
+<a href="https://github.com/"><img src="image/logo/Github.svg" width="70" height="70"  alt="GitHub"/></a>
+<a href="https://web.telegram.org/"><img src="image/logo/Telegram.svg" width="70" height="70"  alt="Telegram"/></a>
 </p>
 
 - В проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования [Selenide](https://selenide.org/).
@@ -74,14 +74,15 @@ gradle clean test
 
 ```
 gradle clean test 
-main -DremoteUrl=${SELENOID}
--DbrowserSize=${SIZE}
--Dbrowser=${BROWSER}
--Dbrowser_version="${VERSION}"
+main -Dbrowser="${BROWSER}"
+-DbrowserVersion="${VERSION}"
+-DbrowserSize="${SIZE}"
+-DremoteVideo="${REMOTE_VIDEO}"
+-DremoteURL="https://user1:1234@${REMOTE_URL}/wd/hub"
 ```
-## <img src="media/logo/jenkins.svg" title="Allure TestOps" width="4%"/> Созданный проект в [Jenkins](https://jenkins.autotests.cloud/job/emonovaev_project/)
+## <img src="image/logo/Jenkins.svg" title="Allure TestOps" width="4%"/> Созданный проект в [Jenkins](https://jenkins.autotests.cloud/job/Jenkins_UI_T-J/)
 <p align="center">
-<img title="allure-report" src="media/screen/JenkinsProject.png">
+<img title="allure-report" src="image/screenshots/JenkinsProject.png">
 </p>
 
 ### Параметры сборки
@@ -90,48 +91,49 @@ main -DremoteUrl=${SELENOID}
 * <code>BROWSER</code> – браузер, в котором будут выполняться тесты. По умолчанию - <code>chrome</code>.
 * <code>SIZE</code> – размер окна браузера, в котором будут выполняться тесты. По умолчанию 1920x1080
 * <code>VERSION</code> – версия браузера, в которой будут выполняться тесты. По умолчанию - <code>100.0</code>.
-* <code>SELENOID</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+* <code>REMOTE_VIDEO</code> – адрес для сохранения видео выполнения теста.
+* <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 
-## <img src="media/logo/jenkins.svg" title="Jenkins" width="4%"/> Страница запуска в Jenkins
+## <img src="image/logo/Jenkins.svg" title="Jenkins" width="4%"/> Страница запуска в Jenkins
 <p align="center">
-<img title="allure-report" src="media/screen/JenkinsJoba.png">
+<img title="allure-report" src="image/screenshots/JenkinsJob.png">
 </p>
 
-## <img src="media/logo/allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/emonovaev_project/18/allure/)
+## <img src="image/logo/Allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/Jenkins_UI_T-J/13/allure/)
 В отчете отображены пройденные автотесты. На приложенном изображении открыт тест кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
-<img title="Allure Overview" src="media/screen/allure-report.png">
+<img title="Allure Overview" src="image/screenshots/Allure-report.png">
 </p>
 
-## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4013/dashboards)
+## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4538/dashboards)
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
 На Dashboard в <code>Allure TestOps</code> отображена статистика пройденных тестов.
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="media/screen/allureTestOps.png">
+<img title="Allure TestOps DashBoard" src="image/screenshots/AllureTestOps.png">
 </p>
 
-## <img src="media/logo/Jira.svg" title="Allure TestOps" width="4%"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1094)
+## <img src="image/logo/Jira.svg" title="Allure TestOps" width="4%"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1378)
 
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
 <p align="center">
-<img title="Jira Task" src="media/screen/jiraTask.png">
+<img title="Jira Task" src="image/screenshots/JiraTask.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/telegram.svg"> Уведомления в Telegram с использованием бота
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="image/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
 <p align="center">
-<img title="Telegram Notifications" src="media/screen/telegramBot.png"  width="400">
+<img title="Telegram Notifications" src="image/screenshots/TelegramBot.png"  width="400">
 </p>
 
 ## Видео примера запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.
 <p align="center">
-  <img title="Selenoid Video" src="media/video.gif">
+  <img title="Selenoid Video" src="image/video/video.gif">
 </p>
