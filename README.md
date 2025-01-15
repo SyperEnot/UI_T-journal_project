@@ -99,7 +99,7 @@ main -Dbrowser="${BROWSER}"
 <img title="allure-report" src="image/screenshots/JenkinsJob.png">
 </p>
 
-## <img src="image/logo/Allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/Jenkins_UI_T-J/13/allure/)
+## <img src="image/logo/Allure.svg" title="Allure TestOps" width="4%"/> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/Jenkins_UI_T-J/allure/)
 В отчете отображены пройденные автотесты. На приложенном изображении открыт тест кейс, отображены его шаги, прикреплены логи, скрины и видео
 <p align="center">
 <img title="Allure Overview" src="image/screenshots/Allure-report.png">
